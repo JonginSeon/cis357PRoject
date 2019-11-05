@@ -27,6 +27,8 @@ import android.widget.Toast;
 import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -43,11 +45,14 @@ public class MainActivity extends AppCompatActivity {
 
     String cameraPermission[];
     String storagePermission[];
+    DatabaseReference databaseActivity;
 
     Uri image_uri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        databaseActivity = FirebaseDatabase.getInstance().getReference("activities");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getSupportActionBar();
@@ -61,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
                 Manifest.permission.WRITE_EXTERNAL_STORAGE};
         //storage permission
         storagePermission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        showImageImportDialog();
+
     }
 
     //actionbar menu
@@ -141,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void requestStoragePermission() {
         ActivityCompat.requestPermissions(this, storagePermission, STORAGE_REQUEST_CODE);
-
     }
 
     private boolean checkStoragePermission() {
@@ -207,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
                 //got image from gallery now crop it
                 CropImage.activity(data.getData())
                         .setGuidelines(CropImageView.Guidelines.ON) //enable image guidlines
-                .start(this);
+                        .start(MainActivity.this);
 
             }
             if (requestCode == IMAGE_PICK_CAMERA_CODE){
@@ -221,9 +227,23 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK){
+
+
+
+
+
+
+
                 Uri resultUri = result.getUri(); //get image uri
                 //set image to image view
                 mPreviewIv.setImageURI(resultUri);
+
+
+
+
+
+
+
 
                 //get drawable bitmap for text recognition
                 BitmapDrawable bitmapDrawable = (BitmapDrawable)mPreviewIv.getDrawable();
@@ -242,10 +262,18 @@ public class MainActivity extends AppCompatActivity {
                     for (int i =0; i<items.size(); i++){
                         TextBlock myItem = items.valueAt(i);
                         sb.append(myItem.getValue());
-                        sb.append("\n");
+//                        sb.append("\n");
                     }
+
+
+
+
                     //set text to edit text
                     mResultEt.setText(sb.toString());
+                    addActivity(sb.toString());
+
+
+
                 }
             }
             else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
@@ -254,5 +282,17 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, ""+error, Toast.LENGTH_SHORT).show();
             }
         }
+    }
+    private void addActivity(String scannedAmt){
+
+
+
+
+            String id = databaseActivity.push().getKey();
+            ScannedAmt amtAfterScan = new ScannedAmt(id,scannedAmt);
+            databaseActivity.child(id).setValue(amtAfterScan);
+            Toast.makeText(this, "Activity is successfully added",Toast.LENGTH_LONG).show();
+
+
     }
 }

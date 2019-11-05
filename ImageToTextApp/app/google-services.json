@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "657124122998",
+    "firebase_url": "https://cis357project-6cc11.firebaseio.com",
+    "project_id": "cis357project-6cc11",
+    "storage_bucket": "cis357project-6cc11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657124122998:android:743e750f8179d5e0ab9a57",
+        "android_client_info": {
+          "package_name": "com.blogspot.atifsoftwares.imagetotextapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657124122998-dgdbtpgi16ftb1rlafldus7agtcbdb7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM6dJAaDsWzLuM3SpT4w6ob57_Z0eVsXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657124122998-dgdbtpgi16ftb1rlafldus7agtcbdb7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
