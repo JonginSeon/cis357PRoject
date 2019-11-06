@@ -63,10 +63,8 @@ public class HomePage extends AppCompatActivity {
                     double  sum = Double.parseDouble(activity.totalAmt);
                     total += sum;
                     Log.d(TAG, "Total: " + activity.totalAmt);
-
                 }
-
-                totalSpent.setText(String.format("%.2f", total));
+                totalSpent.setText("$"+String.format("%.2f", total));
             }
 
             @Override

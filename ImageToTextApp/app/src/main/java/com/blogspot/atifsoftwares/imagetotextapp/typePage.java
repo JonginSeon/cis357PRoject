@@ -36,10 +36,6 @@ public class typePage extends AppCompatActivity {
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                FirebaseDatabase database = FirebaseDatabase.getInstance();
-//                DatabaseReference myRef = database.getReference("message");
-//
-//                myRef.setValue("Hello, World!");
                addActivityManually();
                startActivity(new Intent(typePage.this, HomePage.class));
             }

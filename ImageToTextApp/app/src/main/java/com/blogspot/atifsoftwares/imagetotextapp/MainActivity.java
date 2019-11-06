@@ -20,8 +20,11 @@ import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.vision.Frame;
@@ -31,12 +34,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText mResultEt;
+    TextView mResultEt;
     ImageView mPreviewIv;
-
+    Button saveBtn;
+    Button scanAgain;
+    StringBuilder sb = new StringBuilder();
 
     private static final int CAMERA_REQUEST_CODE = 200;
     private static final int STORAGE_REQUEST_CODE = 400;
@@ -56,10 +62,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setSubtitle("Click Image button to insert Image");
+//        actionBar.setSubtitle("Click Image button to insert Image");
 
         mResultEt = findViewById(R.id.resultEt);
         mPreviewIv = findViewById(R.id.imageIv);
+        saveBtn = findViewById(R.id.saveBtn);
+        scanAgain = findViewById(R.id.scanAgain);
+
+
+
 
         //camera permission
         cameraPermission = new String[]{Manifest.permission.CAMERA,
@@ -68,27 +79,58 @@ public class MainActivity extends AppCompatActivity {
         storagePermission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
         showImageImportDialog();
 
+
+
+
+        scanAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mResultEt.setText("");
+                showImageImportDialog();
+
+            }
+        });
+
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                    boolean pass = addActivity(sb.toString());
+                    if(pass){
+
+                        startActivity(new Intent(MainActivity.this, HomePage.class));
+
+                    }
+                    else{
+
+
+                    }
+
+            }
+        });
+
+
     }
 
     //actionbar menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        //inflate menu
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        //inflate menu
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        return true;
+//    }
     //handle actionbar item clicks
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.addImage){
-            showImageImportDialog();
-        }
-        if (id == R.id.settings){
-            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        int id = item.getItemId();
+//        if (id == R.id.addImage){
+//            showImageImportDialog();
+//        }
+//        if (id == R.id.settings){
+//            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     private void showImageImportDialog() {
         //items to display in dialog
@@ -226,6 +268,9 @@ public class MainActivity extends AppCompatActivity {
         //get cropped image
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
+
+
+
             if (resultCode == RESULT_OK){
 
 
@@ -257,7 +302,8 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     Frame frame = new Frame.Builder().setBitmap(bitmap).build();
                     SparseArray<TextBlock> items = recognizer.detect(frame);
-                    StringBuilder sb = new StringBuilder();
+
+                    sb.setLength(0);
                     //get text from sb until there is no text
                     for (int i =0; i<items.size(); i++){
                         TextBlock myItem = items.valueAt(i);
@@ -265,15 +311,7 @@ public class MainActivity extends AppCompatActivity {
 //                        sb.append("\n");
                     }
 
-
-
-
-                    //set text to edit text
-                    mResultEt.setText(sb.toString());
-                    addActivity(sb.toString());
-
-
-
+                    mResultEt.setText("$"+sb.toString());
                 }
             }
             else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
@@ -283,16 +321,33 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    private void addActivity(String scannedAmt){
+    private boolean addActivity(String scannedAmt){
 
-
-
-
-            String id = databaseActivity.push().getKey();
-            ScannedAmt amtAfterScan = new ScannedAmt(id,scannedAmt);
-            databaseActivity.child(id).setValue(amtAfterScan);
-            Toast.makeText(this, "Activity is successfully added",Toast.LENGTH_LONG).show();
-
-
+            if(scannedAmt.length() <1 ){
+                Toast.makeText(this, "The total is required",Toast.LENGTH_LONG).show();
+                return false;
+            }
+            if ( !isNumeric(scannedAmt) ){
+                Toast.makeText(this, "The total should be numeric",Toast.LENGTH_LONG).show();
+                return false;
+            }
+            else {
+                String id = databaseActivity.push().getKey();
+                ScannedAmt amtAfterScan = new ScannedAmt(id, scannedAmt);
+                databaseActivity.child(id).setValue(amtAfterScan);
+                Toast.makeText(this, "Activity is successfully added", Toast.LENGTH_LONG).show();
+                return true;
+            }
     }
+
+    public static boolean isNumeric(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch(NumberFormatException e){
+            return false;
+        }
+    }
+
+
 }
