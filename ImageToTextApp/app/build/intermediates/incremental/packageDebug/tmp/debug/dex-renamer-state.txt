@@ -1,4 +1,4 @@
-#Sat Nov 09 05:43:50 EST 2019
+#Sat Nov 09 16:03:19 EST 2019
 base.0=C\:\\Users\\Seon\\Desktop\\School\\F19\\CIS357\\project\\cis357PRoject\\ImageToTextApp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

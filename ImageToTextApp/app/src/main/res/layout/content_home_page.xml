@@ -7,7 +7,10 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".HomePage"
-    tools:showIn="@layout/activity_home_page">
+    tools:showIn="@layout/activity_home_page"
+    android:gravity="center"
+
+    >
 
     <TextView
         android:id="@+id/textView"
@@ -16,6 +19,7 @@
         android:layout_marginTop="100dp"
         android:text="Welcome To SaveIT"
         android:textSize="25sp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="Your Total Amount Spent:"
+        android:gravity="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -34,8 +39,9 @@
 
     <TextView
         android:id="@+id/totalSpent"
-        android:layout_width="110dp"
-        android:layout_height="38dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center"
         android:text="0"
         android:textSize="25sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
@@ -64,6 +70,7 @@
         android:id="@+id/textView10"
         android:layout_width="33dp"
         android:layout_height="38dp"
+        android:gravity="center"
         android:text="/"
         android:textSize="25sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/setGoalAmt"
@@ -72,11 +79,12 @@
 
     <TextView
         android:id="@+id/setGoalAmt"
-        android:layout_width="112dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginRight="88dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:gravity="center"
         android:text="0"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,19 +93,22 @@
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="352dp"
+        android:layout_height="50dp"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/percent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.8"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintVertical_bias="0.656" />
 
     <TextView
         android:id="@+id/percent"
-        android:layout_width="92dp"
-        android:layout_height="34dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="104dp"
         android:text="0"
+        android:gravity="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

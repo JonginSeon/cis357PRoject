@@ -89,7 +89,7 @@ public class HomePage extends AppCompatActivity {
 
 
                 goal = total;
-                totalSpent.setText(String.format("%.2f", total));
+                totalSpent.setText("$"+String.format("%.2f", total));
 
 
                 int percentage =  calculate(total);
@@ -113,7 +113,7 @@ public class HomePage extends AppCompatActivity {
                 // Get Post object and use the values to update the UI
                 setGoalAmt = findViewById(R.id.setGoalAmt);
                 goal1= Double.valueOf(dataSnapshot.getValue().toString());
-                setGoalAmt.setText(dataSnapshot.getValue().toString());
+                setGoalAmt.setText("$"+dataSnapshot.getValue().toString());
 
             }
 
@@ -189,7 +189,7 @@ public class HomePage extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get Post object and use the values to update the UI
                 goal1= Double.valueOf(dataSnapshot.getValue().toString());
-                setGoalAmt.setText(dataSnapshot.getValue().toString());
+                setGoalAmt.setText("$"+dataSnapshot.getValue().toString());
                     int i = Integer.valueOf(dataSnapshot.getValue().toString());
                     final int z = i;
                 pb = findViewById(R.id.progressBar);
@@ -239,14 +239,12 @@ public class HomePage extends AppCompatActivity {
                 pb = findViewById(R.id.progressBar);
                 // Get Post object and use the values to update the UI
                 goal1= Double.valueOf(dataSnapshot.getValue().toString());
-                setGoalAmt.setText(dataSnapshot.getValue().toString());
+                setGoalAmt.setText("$"+dataSnapshot.getValue().toString());
                 final int i = Integer.valueOf(dataSnapshot.getValue().toString());
                 final int z = i;
                 pb = findViewById(R.id.progressBar);
-                value.setText(""+(total/i)*100);
+                value.setText(String.format("%.0f", (total/i)*100)+"% reached this so this month");
                 data.child("percentage").child("value").setValue(String.format("%.0f", (total/i)*100));
-
-
 
             }
 
