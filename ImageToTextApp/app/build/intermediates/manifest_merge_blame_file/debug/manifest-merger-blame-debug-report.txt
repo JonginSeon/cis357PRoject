@@ -24,7 +24,7 @@
 14-->[com.google.firebase:firebase-database:16.0.4] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\71114522017e6ca53e203e3c2929be4c\firebase-database-16.0.4\AndroidManifest.xml:23:22-64
 15
 16    <application
-16-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:8:5-35:19
+16-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:8:5-39:19
 17        android:allowBackup="true"
 17-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:9:9-35
 18        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
@@ -43,90 +43,98 @@
 25-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:14:9-40
 26        <activity
 26-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:15:9-18:68
-27            android:name="com.blogspot.atifsoftwares.imagetotextapp.history"
+27            android:name="com.blogspot.atifsoftwares.imagetotextapp.setting"
 27-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:16:13-36
-28            android:label="@string/title_activity_history"
+28            android:label="@string/title_activity_setting"
 28-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:17:13-59
 29            android:theme="@style/AppTheme.NoActionBar" />
 29-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:18:13-56
-30        <activity android:name="com.blogspot.atifsoftwares.imagetotextapp.typePage" />
-30-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:19:9-46
-30-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:19:19-43
-31        <activity android:name="com.blogspot.atifsoftwares.imagetotextapp.AddOption" />
-31-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:20:9-47
-31-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:20:19-44
-32        <activity
-32-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:21:9-30:20
-33            android:name="com.blogspot.atifsoftwares.imagetotextapp.HomePage"
-33-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:22:13-37
-34            android:label="@string/title_activity_home_page"
-34-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:23:13-61
-35            android:theme="@style/AppTheme.NoActionBar" >
-35-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:24:13-56
-36            <intent-filter>
-36-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:25:13-29:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:26:17-69
-37-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:26:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:28:17-77
-39-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:28:27-74
-40            </intent-filter>
-41        </activity>
-42        <activity android:name="com.blogspot.atifsoftwares.imagetotextapp.MainActivity" /> <!-- add in application tag -->
-42-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:31:9-50
-42-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:31:19-47
-43        <activity
-43-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:32:9-34:47
-44            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-44-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:33:13-76
-45            android:theme="@style/AppTheme" />
-45-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:34:13-44
-46
-47        <provider
-47-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\10672e061463887b63ca287c3b3851ed\extensions-1.1.1\AndroidManifest.xml:23:9-27:43
-48            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
-48-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\10672e061463887b63ca287c3b3851ed\extensions-1.1.1\AndroidManifest.xml:24:13-83
-49            android:authorities="com.blogspot.atifsoftwares.imagetotextapp.lifecycle-trojan"
-49-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\10672e061463887b63ca287c3b3851ed\extensions-1.1.1\AndroidManifest.xml:25:13-68
-50            android:exported="false"
-50-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\10672e061463887b63ca287c3b3851ed\extensions-1.1.1\AndroidManifest.xml:26:13-37
-51            android:multiprocess="true" />
-51-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\10672e061463887b63ca287c3b3851ed\extensions-1.1.1\AndroidManifest.xml:27:13-40
-52
-53        <activity
-53-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\76edb33eb6505cb9a84dc29da2308a8c\play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
-54            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-54-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\76edb33eb6505cb9a84dc29da2308a8c\play-services-base-16.0.1\AndroidManifest.xml:24:13-79
-55            android:exported="false"
-55-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\76edb33eb6505cb9a84dc29da2308a8c\play-services-base-16.0.1\AndroidManifest.xml:25:13-37
-56            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-56-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\76edb33eb6505cb9a84dc29da2308a8c\play-services-base-16.0.1\AndroidManifest.xml:26:13-72
-57
-58        <provider
-58-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\0bac933d43d950dffa7fc4c5f8973caa\firebase-common-16.0.3\AndroidManifest.xml:10:9-14:39
-59            android:name="com.google.firebase.provider.FirebaseInitProvider"
-59-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\0bac933d43d950dffa7fc4c5f8973caa\firebase-common-16.0.3\AndroidManifest.xml:11:13-77
-60            android:authorities="com.blogspot.atifsoftwares.imagetotextapp.firebaseinitprovider"
-60-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\0bac933d43d950dffa7fc4c5f8973caa\firebase-common-16.0.3\AndroidManifest.xml:12:13-72
-61            android:exported="false"
-61-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\0bac933d43d950dffa7fc4c5f8973caa\firebase-common-16.0.3\AndroidManifest.xml:13:13-37
-62            android:initOrder="100" />
-62-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\0bac933d43d950dffa7fc4c5f8973caa\firebase-common-16.0.3\AndroidManifest.xml:14:13-36
-63
-64        <meta-data
-64-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\44539c9a9582b5315749e0093ab5b075\play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
-65            android:name="com.google.android.gms.version"
-65-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\44539c9a9582b5315749e0093ab5b075\play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
-66            android:value="@integer/google_play_services_version" />
-66-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\44539c9a9582b5315749e0093ab5b075\play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
-67        <meta-data
-67-->[com.android.support:support-v4:26.1.0] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\62c13e3464d07bb7dcee471b1fbb132c\support-v4-26.1.0\AndroidManifest.xml:26:9-28:38
-68            android:name="android.support.VERSION"
-68-->[com.android.support:support-v4:26.1.0] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\62c13e3464d07bb7dcee471b1fbb132c\support-v4-26.1.0\AndroidManifest.xml:27:13-51
-69            android:value="26.1.0" />
-69-->[com.android.support:support-v4:26.1.0] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\62c13e3464d07bb7dcee471b1fbb132c\support-v4-26.1.0\AndroidManifest.xml:28:13-35
-70    </application>
-71
-72</manifest>
+30        <activity
+30-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:19:9-22:59
+31            android:name="com.blogspot.atifsoftwares.imagetotextapp.history"
+31-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:20:13-36
+32            android:label="@string/title_activity_history"
+32-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:21:13-59
+33            android:theme="@style/AppTheme.NoActionBar" />
+33-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:22:13-56
+34        <activity android:name="com.blogspot.atifsoftwares.imagetotextapp.typePage" />
+34-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:23:9-46
+34-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:23:19-43
+35        <activity android:name="com.blogspot.atifsoftwares.imagetotextapp.AddOption" />
+35-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:24:9-47
+35-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:24:19-44
+36        <activity
+36-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:25:9-34:20
+37            android:name="com.blogspot.atifsoftwares.imagetotextapp.HomePage"
+37-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:26:13-37
+38            android:label="@string/title_activity_home_page"
+38-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:27:13-61
+39            android:theme="@style/AppTheme.NoActionBar" >
+39-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:28:13-56
+40            <intent-filter>
+40-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:29:13-33:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:30:17-69
+41-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:30:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:32:17-77
+43-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:32:27-74
+44            </intent-filter>
+45        </activity>
+46        <activity android:name="com.blogspot.atifsoftwares.imagetotextapp.MainActivity" /> <!-- add in application tag -->
+46-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:35:9-50
+46-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:35:19-47
+47        <activity
+47-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:36:9-38:47
+48            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+48-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:37:13-76
+49            android:theme="@style/AppTheme" />
+49-->C:\Users\Seon\Desktop\School\F19\CIS357\project\cis357PRoject\ImageToTextApp\app\src\main\AndroidManifest.xml:38:13-44
+50
+51        <provider
+51-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\10672e061463887b63ca287c3b3851ed\extensions-1.1.1\AndroidManifest.xml:23:9-27:43
+52            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+52-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\10672e061463887b63ca287c3b3851ed\extensions-1.1.1\AndroidManifest.xml:24:13-83
+53            android:authorities="com.blogspot.atifsoftwares.imagetotextapp.lifecycle-trojan"
+53-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\10672e061463887b63ca287c3b3851ed\extensions-1.1.1\AndroidManifest.xml:25:13-68
+54            android:exported="false"
+54-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\10672e061463887b63ca287c3b3851ed\extensions-1.1.1\AndroidManifest.xml:26:13-37
+55            android:multiprocess="true" />
+55-->[android.arch.lifecycle:extensions:1.1.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\10672e061463887b63ca287c3b3851ed\extensions-1.1.1\AndroidManifest.xml:27:13-40
+56
+57        <activity
+57-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\76edb33eb6505cb9a84dc29da2308a8c\play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
+58            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+58-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\76edb33eb6505cb9a84dc29da2308a8c\play-services-base-16.0.1\AndroidManifest.xml:24:13-79
+59            android:exported="false"
+59-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\76edb33eb6505cb9a84dc29da2308a8c\play-services-base-16.0.1\AndroidManifest.xml:25:13-37
+60            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+60-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\76edb33eb6505cb9a84dc29da2308a8c\play-services-base-16.0.1\AndroidManifest.xml:26:13-72
+61
+62        <provider
+62-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\0bac933d43d950dffa7fc4c5f8973caa\firebase-common-16.0.3\AndroidManifest.xml:10:9-14:39
+63            android:name="com.google.firebase.provider.FirebaseInitProvider"
+63-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\0bac933d43d950dffa7fc4c5f8973caa\firebase-common-16.0.3\AndroidManifest.xml:11:13-77
+64            android:authorities="com.blogspot.atifsoftwares.imagetotextapp.firebaseinitprovider"
+64-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\0bac933d43d950dffa7fc4c5f8973caa\firebase-common-16.0.3\AndroidManifest.xml:12:13-72
+65            android:exported="false"
+65-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\0bac933d43d950dffa7fc4c5f8973caa\firebase-common-16.0.3\AndroidManifest.xml:13:13-37
+66            android:initOrder="100" />
+66-->[com.google.firebase:firebase-common:16.0.3] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\0bac933d43d950dffa7fc4c5f8973caa\firebase-common-16.0.3\AndroidManifest.xml:14:13-36
+67
+68        <meta-data
+68-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\44539c9a9582b5315749e0093ab5b075\play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
+69            android:name="com.google.android.gms.version"
+69-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\44539c9a9582b5315749e0093ab5b075\play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
+70            android:value="@integer/google_play_services_version" />
+70-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\44539c9a9582b5315749e0093ab5b075\play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
+71        <meta-data
+71-->[com.android.support:support-v4:26.1.0] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\62c13e3464d07bb7dcee471b1fbb132c\support-v4-26.1.0\AndroidManifest.xml:26:9-28:38
+72            android:name="android.support.VERSION"
+72-->[com.android.support:support-v4:26.1.0] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\62c13e3464d07bb7dcee471b1fbb132c\support-v4-26.1.0\AndroidManifest.xml:27:13-51
+73            android:value="26.1.0" />
+73-->[com.android.support:support-v4:26.1.0] C:\Users\Seon\.gradle\caches\transforms-2\files-2.1\62c13e3464d07bb7dcee471b1fbb132c\support-v4-26.1.0\AndroidManifest.xml:28:13-35
+74    </application>
+75
+76</manifest>

@@ -112,25 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //actionbar menu
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        //inflate menu
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
-    //handle actionbar item clicks
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        if (id == R.id.addImage){
-//            showImageImportDialog();
-//        }
-//        if (id == R.id.settings){
-//            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
+
 
     private void showImageImportDialog() {
         //items to display in dialog

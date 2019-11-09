@@ -25,6 +25,10 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.blogspot.atifsoftwares.imagetotextapp.setting"
+            android:label="@string/title_activity_setting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.blogspot.atifsoftwares.imagetotextapp.history"
             android:label="@string/title_activity_history"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -52,7 +52,7 @@ public class typePage extends AppCompatActivity {
             String id = databaseActivity.push().getKey();
             Activities activity = new Activities(id,totalAmt,date);
             databaseActivity.child(id).setValue(activity);
-          Toast.makeText(this, "Activity is successfully added",Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Activity is successfully added",Toast.LENGTH_LONG).show();
 
         }
         else{

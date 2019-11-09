@@ -1069,6 +1069,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable circular
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1127,6 +1128,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable whitecircle
 id ALT
 id CTRL
 id CropOverlayView
@@ -1157,7 +1159,6 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id addImage
 id adjust_height
 id adjust_width
 id alertTitle
@@ -1225,6 +1226,7 @@ id fitCenter
 id fixed
 id forever
 id ghost_view
+id goalSpendingText
 id gone
 id group_divider
 id groups
@@ -1279,8 +1281,10 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id pb
 id percent
 id pin
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -1313,6 +1317,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id setGoalAmt
 id settings
 id shortcut
 id showCustom
@@ -1346,6 +1351,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView10
 id textView11
 id textView12
 id textView2
@@ -1354,6 +1360,8 @@ id textView4
 id textView5
 id textView6
 id textView7
+id textView8
+id textView9
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1436,9 +1444,11 @@ layout activity_add_option
 layout activity_history
 layout activity_home_page
 layout activity_main
+layout activity_setting
 layout activity_type_page
 layout content_history
 layout content_home_page
+layout content_setting
 layout crop_image_activity
 layout crop_image_view
 layout design_bottom_navigation_item
@@ -1576,6 +1586,7 @@ string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_history
 string title_activity_home_page
+string title_activity_setting
 string title_dashboard
 string title_home
 string title_notifications
