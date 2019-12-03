@@ -41,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
     TextView mResultEt;
     ImageView mPreviewIv;
     Button saveBtn;
+    TextView titleView;
     Button scanAgain;
+    TextView dateView;
     StringBuilder sb = new StringBuilder();
 
     private static final int CAMERA_REQUEST_CODE = 200;
@@ -68,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         mPreviewIv = findViewById(R.id.imageIv);
         saveBtn = findViewById(R.id.saveBtn);
         scanAgain = findViewById(R.id.scanAgain);
+        titleView = (TextView)findViewById(R.id.titleText);
+        dateView = (TextView)findViewById(R.id.getDate);
 
 
 
@@ -94,8 +98,9 @@ public class MainActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                    boolean pass = addActivity(sb.toString());
+                String title = titleView.getText().toString();
+                String date = dateView.getText().toString();
+                    boolean pass = addActivity(sb.toString(),title,date);
                     if(pass){
 
                         startActivity(new Intent(MainActivity.this, HomePage.class));
@@ -303,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    private boolean addActivity(String scannedAmt){
+    private boolean addActivity(String scannedAmt, String title,String date){
 
             if(scannedAmt.length() <1 ){
                 Toast.makeText(this, "The total is required",Toast.LENGTH_LONG).show();
@@ -314,8 +319,10 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
             else {
+
                 String id = databaseActivity.push().getKey();
-                ScannedAmt amtAfterScan = new ScannedAmt(id, scannedAmt);
+
+                ScannedAmt amtAfterScan = new ScannedAmt(id, scannedAmt,title,date);
                 databaseActivity.child(id).setValue(amtAfterScan);
                 Toast.makeText(this, "Activity is successfully added", Toast.LENGTH_LONG).show();
                 return true;

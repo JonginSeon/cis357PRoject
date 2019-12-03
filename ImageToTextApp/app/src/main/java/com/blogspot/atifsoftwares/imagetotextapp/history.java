@@ -49,13 +49,10 @@ public class history extends AppCompatActivity {
                 for(DataSnapshot activitySnapshot :dataSnapshot.getChildren()){
                     Activities act =activitySnapshot.getValue(Activities.class);
                     activitiesList.add(act);
-
                 }
-
                 ActivitiesList adapter = new ActivitiesList(history.this, activitiesList);
                 listViewActivity.setAdapter((adapter));
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 

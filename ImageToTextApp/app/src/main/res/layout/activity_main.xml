@@ -12,17 +12,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+
+
+
+
+
     ]]>
 
     <ImageView
         android:id="@+id/imageIv"
         android:layout_width="227dp"
         android:layout_height="135dp"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="40dp"
         android:maxHeight="250dp"
         app:layout_constraintBottom_toTopOf="@+id/resultEt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -42,8 +48,8 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:text="Total:"
         android:textSize="25sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/resultEt"
@@ -53,18 +59,18 @@
         android:id="@+id/resultEt"
         android:layout_width="96dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="40dp"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/scanAgain"
+        app:layout_constraintBottom_toTopOf="@+id/titleText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintHorizontal_bias="0.259"
         app:layout_constraintStart_toEndOf="@+id/textView12" />
 
     <Button
         android:id="@+id/scanAgain"
         android:layout_width="0dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="40dp"
         android:text="Scan Again"
         app:layout_constraintBottom_toTopOf="@+id/saveBtn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,12 +81,59 @@
         android:id="@+id/saveBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="80dp"
         android:text="Save this activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Title"
+        android:textSize="25sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/titleText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/getDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintStart_toEndOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/getDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/scanAgain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toEndOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Date"
+        android:textSize="25sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/getDate"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
 
 

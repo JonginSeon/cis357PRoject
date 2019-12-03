@@ -33,11 +33,13 @@ public class ActivitiesList extends ArrayAdapter<Activities> {
 
         TextView name = (TextView) listViewItem.findViewById(R.id.textViewName);
         TextView total = (TextView) listViewItem.findViewById(R.id.textViewTotal);
+        TextView date = (TextView) listViewItem.findViewById(R.id.dateView);
 
         Activities activities = actList.get(position);
 
-        name.setText(activities.getActivityId());
-        total.setText(activities.getTotalAmt());
+        name.setText(activities.getTitle());
+        total.setText("$"+activities.getTotalAmt());
+        date.setText(activities.getDate());
         return listViewItem;
 
     }

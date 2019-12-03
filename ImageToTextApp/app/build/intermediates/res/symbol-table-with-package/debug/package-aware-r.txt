@@ -1197,7 +1197,7 @@ id crop_image_menu_rotate_right
 id custom
 id customPanel
 id dark
-id dateText
+id dateView
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1225,6 +1225,7 @@ id finishBtn
 id fitCenter
 id fixed
 id forever
+id getDate
 id ghost_view
 id goalSpendingText
 id gone
@@ -1355,11 +1356,13 @@ id textView
 id textView10
 id textView11
 id textView12
+id textView13
+id textView15
 id textView2
 id textView3
-id textView4
 id textView5
 id textView6
+id textView7
 id textView8
 id textView9
 id textViewName
@@ -1371,6 +1374,7 @@ id textinput_helper_text
 id time
 id title
 id titleDividerNoCustom
+id titleText
 id title_template
 id toolbar
 id top
@@ -1383,6 +1387,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvDate
 id typeBtn
 id uniform
 id unlabeled
