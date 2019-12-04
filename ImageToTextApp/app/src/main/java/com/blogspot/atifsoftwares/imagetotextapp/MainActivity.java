@@ -1,12 +1,15 @@
 package com.blogspot.atifsoftwares.imagetotextapp;
 
 import android.Manifest;
+import android.app.DatePickerDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -18,11 +21,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.SparseArray;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,16 +35,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
-import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-
+    TextView mViewDate;
+    private DatePickerDialog.OnDateSetListener mDateSetListener1;
     TextView mResultEt;
     ImageView mPreviewIv;
     Button saveBtn;
     TextView titleView;
     Button scanAgain;
-    TextView dateView;
+
     StringBuilder sb = new StringBuilder();
 
     private static final int CAMERA_REQUEST_CODE = 200;
@@ -59,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         databaseActivity = FirebaseDatabase.getInstance().getReference("activities");
 
         super.onCreate(savedInstanceState);
@@ -71,11 +76,9 @@ public class MainActivity extends AppCompatActivity {
         saveBtn = findViewById(R.id.saveBtn);
         scanAgain = findViewById(R.id.scanAgain);
         titleView = (TextView)findViewById(R.id.titleText);
-        dateView = (TextView)findViewById(R.id.getDate);
+    //    dateView = (TextView)findViewById(R.id.getDate);
 
-
-
-
+        mViewDate = findViewById(R.id.tvDate);
         //camera permission
         cameraPermission = new String[]{Manifest.permission.CAMERA,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -99,8 +102,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String title = titleView.getText().toString();
-                String date = dateView.getText().toString();
-                    boolean pass = addActivity(sb.toString(),title,date);
+                //String date = dateView.getText().toString();
+
+                    boolean pass = addActivity(sb.toString(),title,mViewDate.getText().toString());
                     if(pass){
 
                         startActivity(new Intent(MainActivity.this, HomePage.class));
@@ -113,7 +117,32 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        mViewDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar cal  = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
 
+                DatePickerDialog dialog = new DatePickerDialog(
+                        MainActivity.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        mDateSetListener1,
+                        year,month,day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
+            }
+        });
+        mDateSetListener1 = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                month = month+1;
+                String date = month+"/"+dayOfMonth+"/"+year;
+                mViewDate.setText(date);
+            }
+        };
 
     }
 
@@ -327,8 +356,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Activity is successfully added", Toast.LENGTH_LONG).show();
                 return true;
             }
-    }
 
+    }
     public static boolean isNumeric(String str) {
         try {
             Double.parseDouble(str);
@@ -337,6 +366,4 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
     }
-
-
 }

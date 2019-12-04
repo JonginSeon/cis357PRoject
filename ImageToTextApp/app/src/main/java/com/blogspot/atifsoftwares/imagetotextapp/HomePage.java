@@ -243,7 +243,7 @@ public class HomePage extends AppCompatActivity {
                 final int i = Integer.valueOf(dataSnapshot.getValue().toString());
                 final int z = i;
                 pb = findViewById(R.id.progressBar);
-                value.setText(String.format("%.0f", (total/i)*100)+"% reached this so this month");
+                value.setText(String.format("%.0f", (total/i)*100)+"% reached this month");
                 data.child("percentage").child("value").setValue(String.format("%.0f", (total/i)*100));
 
             }

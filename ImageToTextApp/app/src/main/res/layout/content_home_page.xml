@@ -39,8 +39,8 @@
 
     <TextView
         android:id="@+id/totalSpent"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="81dp"
+        android:layout_height="47dp"
         android:gravity="center"
         android:text="0"
         android:textSize="25sp"
@@ -79,11 +79,11 @@
 
     <TextView
         android:id="@+id/setGoalAmt"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
+        android:layout_width="79dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
         android:gravity="center"
         android:text="0"
         android:textSize="25sp"
@@ -113,6 +113,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
     <!--        android:layout_margin="20dp"-->
 <!--        android:layout_marginBottom="124dp"-->
 <!--        android:indeterminate="true"-->

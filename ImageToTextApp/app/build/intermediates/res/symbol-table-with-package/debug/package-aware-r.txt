@@ -1225,7 +1225,6 @@ id finishBtn
 id fitCenter
 id fixed
 id forever
-id getDate
 id ghost_view
 id goalSpendingText
 id gone
@@ -1357,7 +1356,7 @@ id textView10
 id textView11
 id textView12
 id textView13
-id textView15
+id textView14
 id textView2
 id textView3
 id textView5

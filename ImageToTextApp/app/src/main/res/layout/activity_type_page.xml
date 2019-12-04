@@ -14,28 +14,28 @@
         android:layout_marginLeft="16dp"
         android:text="Date"
         android:textSize="25sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvDate"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dateView"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/finishBtn"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="128dp"
-        android:text="Finish"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="112dp"
+        android:text="SAVE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDate"
-        app:layout_constraintVertical_bias="0.511" />
+        app:layout_constraintTop_toBottomOf="@+id/dateView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/totalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
 
         android:layout_marginRight="80dp"
@@ -62,11 +62,11 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="76dp"
-        android:text="Recode your money manually"
+        android:text="Type Amount Below"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_centerHorizontal="true"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -99,14 +99,14 @@
         app:layout_constraintTop_toBottomOf="@+id/totalText" />
 
     <TextView
-        android:id="@+id/tvDate"
+        android:id="@+id/dateView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="40dp"
         android:text="Select Date"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.006"
         app:layout_constraintStart_toEndOf="@+id/textView7"

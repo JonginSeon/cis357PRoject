@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -14,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.common.util.NumberUtils;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -42,7 +40,7 @@ public class typePage extends AppCompatActivity {
 //         dateText = (EditText) findViewById(R.id.dateText);
          finishBtn = (Button) findViewById(R.id.finishBtn);
         titleText = (EditText) findViewById(R.id.titleText);
-        mDisplayDate = (TextView) findViewById(R.id.tvDate);
+        mDisplayDate = (TextView) findViewById(R.id.dateView);
 
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +91,7 @@ public class typePage extends AppCompatActivity {
         }
         else{
             Toast.makeText(this, "You should complete Total or Date",Toast.LENGTH_LONG).show();
+
         }
     }
 

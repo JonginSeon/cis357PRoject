@@ -30,7 +30,6 @@ public class ActivitiesList extends ArrayAdapter<Activities> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
         View listViewItem = inflater.inflate(R.layout.list_layout,null , true);
-
         TextView name = (TextView) listViewItem.findViewById(R.id.textViewName);
         TextView total = (TextView) listViewItem.findViewById(R.id.textViewTotal);
         TextView date = (TextView) listViewItem.findViewById(R.id.dateView);
