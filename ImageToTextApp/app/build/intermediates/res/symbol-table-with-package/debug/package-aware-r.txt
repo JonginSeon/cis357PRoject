@@ -1,4 +1,4 @@
-com.blogspot.atifsoftwares.imagetotextapp
+mail.gvsu.edu.imagetotextapp
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom

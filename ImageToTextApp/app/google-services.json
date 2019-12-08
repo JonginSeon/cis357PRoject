@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "657124122998",
-    "firebase_url": "https://cis357project-6cc11.firebaseio.com",
-    "project_id": "cis357project-6cc11",
-    "storage_bucket": "cis357project-6cc11.appspot.com"
+    "project_number": "631975150664",
+    "firebase_url": "https://cis357project-82c4f.firebaseio.com",
+    "project_id": "cis357project-82c4f",
+    "storage_bucket": "cis357project-82c4f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:657124122998:android:743e750f8179d5e0ab9a57",
+        "mobilesdk_app_id": "1:631975150664:android:b44cf450161a0836f9447d",
         "android_client_info": {
-          "package_name": "com.blogspot.atifsoftwares.imagetotextapp"
+          "package_name": "mail.gvsu.edu.imagetotextapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "657124122998-dgdbtpgi16ftb1rlafldus7agtcbdb7h.apps.googleusercontent.com",
+          "client_id": "631975150664-2bhdjjo9u2co7k1sh3dmchci1kvlir4q.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCM6dJAaDsWzLuM3SpT4w6ob57_Z0eVsXE"
+          "current_key": "AIzaSyCn4Tq6PcLM1w7I2S9Ja3v1ThngfcuW01M"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "657124122998-dgdbtpgi16ftb1rlafldus7agtcbdb7h.apps.googleusercontent.com",
+              "client_id": "631975150664-2bhdjjo9u2co7k1sh3dmchci1kvlir4q.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

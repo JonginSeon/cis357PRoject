@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.blogspot.atifsoftwares.imagetotextapp"
+    package="mail.gvsu.edu.imagetotextapp"
     android:targetSandboxVersion="2"
     android:versionCode="1"
     android:versionName="1.0" >
@@ -25,17 +25,17 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.blogspot.atifsoftwares.imagetotextapp.setting"
+            android:name="mail.gvsu.edu.imagetotextapp.setting"
             android:label="@string/title_activity_setting"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.blogspot.atifsoftwares.imagetotextapp.history"
+            android:name="mail.gvsu.edu.imagetotextapp.history"
             android:label="@string/title_activity_history"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.blogspot.atifsoftwares.imagetotextapp.typePage" />
-        <activity android:name="com.blogspot.atifsoftwares.imagetotextapp.AddOption" />
+        <activity android:name="mail.gvsu.edu.imagetotextapp.typePage" />
+        <activity android:name="mail.gvsu.edu.imagetotextapp.AddOption" />
         <activity
-            android:name="com.blogspot.atifsoftwares.imagetotextapp.HomePage"
+            android:name="mail.gvsu.edu.imagetotextapp.HomePage"
             android:label="@string/title_activity_home_page"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -44,14 +44,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.blogspot.atifsoftwares.imagetotextapp.MainActivity" /> <!-- add in application tag -->
+        <activity android:name="mail.gvsu.edu.imagetotextapp.MainActivity" /> <!-- add in application tag -->
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/AppTheme" />
 
         <provider
             android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="com.blogspot.atifsoftwares.imagetotextapp.lifecycle-trojan"
+            android:authorities="mail.gvsu.edu.imagetotextapp.lifecycle-trojan"
             android:exported="false"
             android:multiprocess="true" />
 
@@ -62,7 +62,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.blogspot.atifsoftwares.imagetotextapp.firebaseinitprovider"
+            android:authorities="mail.gvsu.edu.imagetotextapp.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
 

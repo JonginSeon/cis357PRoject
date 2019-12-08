@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddOption">
+    tools:context="mail.gvsu.edu.imagetotextapp.AddOption">
 
     <Button
         android:id="@+id/typeBtn"
