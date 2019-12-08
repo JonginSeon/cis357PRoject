@@ -1,4 +1,4 @@
-#Sun Dec 08 13:09:50 EST 2019
-base.0=C\:\\Users\\Christian Tsoungui\\AndroidStudioProjects\\cis357PRoject\\ImageToTextApp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Sun Dec 08 15:07:47 EST 2019
+base.0=C\:\\Users\\Seon\\Desktop\\School\\F19\\CIS357\\test\\cis357PRoject\\ImageToTextApp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

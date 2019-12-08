@@ -7,8 +7,6 @@ public class Activities {
     String date;
     String title;
     public Activities(){
-
-
     }
 
 

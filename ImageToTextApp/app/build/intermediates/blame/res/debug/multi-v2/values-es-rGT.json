@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Christian Tsoungui\\AndroidStudioProjects\\cis357PRoject\\ImageToTextApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rGT\\values-es-rGT.xml",
+            "outputFile": "C:\\Users\\Seon\\Desktop\\School\\F19\\CIS357\\test\\cis357PRoject\\ImageToTextApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rGT\\values-es-rGT.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Christian Tsoungui\\.gradle\\wrapper\\dists\\gradle-5.6.2\\caches\\transforms-2\\files-2.1\\4d4e70644c2d1546a979c794b93c6b2f\\android-image-cropper-2.7.0\\res\\values-es-rGT\\values-es-rGT.xml",
+                    "source": "C:\\Users\\Seon\\.gradle\\caches\\transforms-2\\files-2.1\\4d4e70644c2d1546a979c794b93c6b2f\\android-image-cropper-2.7.0\\res\\values-es-rGT\\values-es-rGT.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
